@@ -1,13 +1,25 @@
-import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import React, { useState } from 'react';
+
 import { Link, useNavigate } from 'react-router-dom';
+import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
+
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  signInStart,
+  signInSuccess,
+  signInFailure,
+} from '../redux/user/userSlice';
+
 import { FormDataType } from '../types';
 
 const SignIn = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({} as FormDataType);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [loading, setLoading] = useState(false);
+
+  const { loading, error: errorMessage } = useSelector(
+    (state: any) => state.user
+  );
+  const dispatch = useDispatch();
 
   const handleChange = (e: React.ChangeEvent) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
@@ -17,11 +29,10 @@ const SignIn = () => {
     e.preventDefault();
 
     if (!formData.email || !formData.password) {
-      return setErrorMessage('Please fill out all fields');
+      return dispatch(signInFailure('All fields are required!'));
     }
     try {
-      setLoading(true);
-      setErrorMessage('');
+      dispatch(signInStart());
       const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: {
@@ -32,17 +43,15 @@ const SignIn = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        setLoading(false);
-        return setErrorMessage(data.message);
+        dispatch(signInFailure(data.message));
       }
 
       if (res.ok) {
-        setLoading(false);
+        dispatch(signInSuccess(data));
         navigate('/');
       }
     } catch (error: { message: string }) {
-      setErrorMessage(error.message);
-      setLoading(false);
+      dispatch(signInFailure(error.message));
     }
   };
   return (
