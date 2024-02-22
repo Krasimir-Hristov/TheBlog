@@ -12,6 +12,7 @@ import {
 
 import { FormDataType } from '../types';
 import { RootState } from '../redux/store';
+import OAuth from '../components/OAuth';
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -103,6 +104,8 @@ const SignIn = () => {
                 'Sign in'
               )}
             </Button>
+
+            <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Don't Have an account?</span>
