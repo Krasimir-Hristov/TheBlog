@@ -11,13 +11,14 @@ import {
 } from '../redux/user/userSlice';
 
 import { FormDataType } from '../types';
+import { RootState } from '../redux/store';
 
 const SignIn = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({} as FormDataType);
 
   const { loading, error: errorMessage } = useSelector(
-    (state: any) => state.user
+    (state: RootState) => state.user
   );
   const dispatch = useDispatch();
 
