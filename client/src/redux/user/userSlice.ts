@@ -1,8 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+interface User {
+  profilePicture: string;
+  email: string;
+  username: string;
+}
+
 export interface UserState {
-  currentUser: null;
-  error: null;
+  currentUser: User | null;
+  error: string | null;
   loading: boolean;
 }
 
