@@ -24,8 +24,6 @@ const Header = () => {
   const { currentUser } = useSelector((state: RootState) => state.user);
   const { theme } = useSelector((state: RootState) => state.theme);
 
-  console.log(currentUser);
-
   return (
     <Navbar className='border-b-2'>
       <Link
