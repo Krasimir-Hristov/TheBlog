@@ -16,6 +16,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/store';
 import { toggleTheme } from '../redux/theme/themeSlice';
+import { signoutSuccess } from '../redux/user/userSlice';
 
 const Header = () => {
   const path = useLocation().pathname;
@@ -23,6 +24,22 @@ const Header = () => {
 
   const { currentUser } = useSelector((state: RootState) => state.user);
   const { theme } = useSelector((state: RootState) => state.theme);
+
+  const handleSignout = async () => {
+    try {
+      const res = await fetch('/api/user/signout', {
+        method: 'POST',
+      });
+
+      if (!res.ok) {
+        console.log(data.message);
+      } else {
+        dispatch(signoutSuccess());
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <Navbar className='border-b-2'>
@@ -65,9 +82,7 @@ const Header = () => {
             }
           >
             <Dropdown.Header>
-              <span className='block text-sm'>
-                @{currentUser.username}
-              </span>
+              <span className='block text-sm'>@{currentUser.username}</span>
               <span className='block text-sm font-medium truncate'>
                 {currentUser.email}
               </span>
@@ -76,7 +91,7 @@ const Header = () => {
               <Dropdown.Item>Profile</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Dropdown.Item>Sign out</Dropdown.Item>
+            <Dropdown.Item onClick={handleSignout}>Sign out</Dropdown.Item>
           </Dropdown>
         ) : (
           <Link to='/sign-in'>
