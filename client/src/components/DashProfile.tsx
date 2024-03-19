@@ -261,7 +261,11 @@ const DashProfile = () => {
         </Button>
         {currentUser?.isAdmin && (
           <Link to={'/create-post'}>
-            <Button type='button' className='w-full'>
+            <Button
+              type='button'
+              gradientDuoTone='tealToLime'
+              className='w-full'
+            >
               Create a post
             </Button>
           </Link>
