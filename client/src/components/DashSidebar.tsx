@@ -7,6 +7,7 @@ import { HiArrowSmRight, HiDocumentText, HiUser } from 'react-icons/hi';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { signoutSuccess } from '../redux/user/userSlice';
+import { HiOutlineUserGroup } from 'react-icons/hi';
 
 const DashSidebar = () => {
   const location = useLocation();
@@ -67,6 +68,19 @@ const DashSidebar = () => {
               </Sidebar.Item>
             </Link>
           )}
+
+          {currentUser.isAdmin && (
+            <Link to='/dashboard?tab=users'>
+              <Sidebar.Item
+                active={tab === 'users'}
+                icon={HiOutlineUserGroup}
+                as='div'
+              >
+                Users
+              </Sidebar.Item>
+            </Link>
+          )}
+
           <Sidebar.Item
             icon={HiArrowSmRight}
             className='cursor-pointer'
