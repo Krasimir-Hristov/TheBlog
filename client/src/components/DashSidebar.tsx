@@ -30,9 +30,9 @@ const DashSidebar = () => {
       const res = await fetch('/api/user/signout', {
         method: 'POST',
       });
-
+      console.log(res);
       if (!res.ok) {
-        console.log(data.message);
+        console.log(res.message);
       } else {
         dispatch(signoutSuccess());
       }
