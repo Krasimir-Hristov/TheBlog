@@ -18,10 +18,9 @@ const FooterComponent = () => {
               to='/'
               className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
             >
-              <span className='bg-gradient-to-r font-bold  from-white via-green-700 to-red-700 text-white px-2 py-1 rounded-md'>
-                Bulgarians
+              <span className='bg-black text-white px-2 py-1 rounded-md'>
+                Eleni&apos;s <span className='text-yellow-400'>Bekery</span>
               </span>
-              Blog
             </Link>
           </div>
           <div className='grid grid-cols-2 gap-8 mt-4  sm:grid-cols-3  sm:gap-6'>
@@ -79,7 +78,7 @@ const FooterComponent = () => {
         <div className='w-full sm:flex sm:items-center sm:justify-between'>
           <Footer.Copyright
             href='#'
-            by='Bulgarians Blog'
+            by="Eleni's Bekery Wendlingen"
             year={new Date().getFullYear()}
           />
           <div className='flex gap-6 mt-4 sm:mt-0 sm:justify-center'>

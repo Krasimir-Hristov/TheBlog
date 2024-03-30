@@ -47,10 +47,13 @@ const Header = () => {
         to='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        <span className='bg-gradient-to-r font-bold  from-white via-green-700 to-red-700 text-white px-2 py-1 rounded-md'>
-          Bulgarians
+        {/* <img
+          className='w-15 h-15'
+          src='https://scontent-muc2-1.xx.fbcdn.net/v/t1.6435-1/164968288_124705672996401_6599332581066927361_n.jpg?stp=dst-jpg_p200x200&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YPqxMrSWrjYAX_1xLfv&_nc_ht=scontent-muc2-1.xx&oh=00_AfA-srNImhyriVcdCa8ajJKoYeiDy8KUb7aaESErFdjwlA&oe=662FB220'
+        /> */}
+        <span className='bg-black text-white px-2 py-1 rounded-md'>
+          Eleni's <span className='text-yellow-400'>Bekery</span>
         </span>
-        Blog
       </Link>
 
       <form>
