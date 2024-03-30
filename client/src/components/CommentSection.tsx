@@ -94,6 +94,7 @@ const CommentSection = ({ postId }) => {
       )
     );
   };
+
   return (
     <div className='max-w-2xl mx-auto w-full p-3'>
       {currentUser ? (
@@ -131,7 +132,7 @@ const CommentSection = ({ postId }) => {
           <Textarea
             placeholder='Add a comment...'
             rows='3'
-            maxLength='200'
+            maxLength={200}
             onChange={(e) => setComment(e.target.value)}
             value={comment}
           />
@@ -164,7 +165,12 @@ const CommentSection = ({ postId }) => {
           </div>
 
           {comments.map((comment) => (
-            <Comment key={comment._id} comment={comment} onLike={handleLike} />
+            <Comment
+              key={comment._id}
+              comment={comment}
+              onLike={handleLike}
+              onEdit={handleEdit}
+            />
           ))}
         </>
       )}
