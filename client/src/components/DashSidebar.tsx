@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { Sidebar } from 'flowbite-react';
-import { HiArrowSmRight, HiDocumentText, HiUser } from 'react-icons/hi';
+import {
+  HiAnnotation,
+  HiArrowSmRight,
+  HiDocumentText,
+  HiUser,
+} from 'react-icons/hi';
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
@@ -58,15 +63,27 @@ const DashSidebar = () => {
             </Sidebar.Item>
           </Link>
           {currentUser.isAdmin && (
-            <Link to='/dashboard?tab=posts'>
-              <Sidebar.Item
-                active={tab === 'posts'}
-                icon={HiDocumentText}
-                as='div'
-              >
-                Posts
-              </Sidebar.Item>
-            </Link>
+            <>
+              <Link to='/dashboard?tab=posts'>
+                <Sidebar.Item
+                  active={tab === 'posts'}
+                  icon={HiDocumentText}
+                  as='div'
+                >
+                  Posts
+                </Sidebar.Item>
+              </Link>
+
+              <Link to='/dashboard?tab=comments'>
+                <Sidebar.Item
+                  active={tab === 'comments'}
+                  icon={HiAnnotation}
+                  as='div'
+                >
+                  Comments
+                </Sidebar.Item>
+              </Link>
+            </>
           )}
 
           {currentUser.isAdmin && (
