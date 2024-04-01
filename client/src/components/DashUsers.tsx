@@ -4,9 +4,10 @@ import { FaCheck, FaTimes } from 'react-icons/fa';
 import { HiOutlineExclamationCircle } from 'react-icons/hi2';
 
 import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
 const DashUsers = () => {
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
 
   const [users, setUsers] = useState([]);
   const [showMore, setShowMore] = useState(true);

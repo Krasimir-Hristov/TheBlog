@@ -14,13 +14,14 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { HiOutlineUserGroup } from 'react-icons/hi';
+import { RootState } from '../redux/store';
 
 const DashSidebar = () => {
   const location = useLocation();
   const [tab, setTab] = useState('');
   const dispatch = useDispatch();
 
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);

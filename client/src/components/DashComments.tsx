@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 import { HiOutlineExclamationCircle } from 'react-icons/hi2';
 
 import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
 const DashComments = () => {
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
   const [comments, setComments] = useState([]);
   const [showMore, setShowMore] = useState(true);
   const [showModal, setShowModal] = useState(false);

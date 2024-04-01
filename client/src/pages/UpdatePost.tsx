@@ -13,6 +13,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
 export default function UpdatePost() {
   const [file, setFile] = useState(null);
@@ -23,7 +24,7 @@ export default function UpdatePost() {
 
   const { postId } = useParams();
 
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
 
   const navigate = useNavigate();
 

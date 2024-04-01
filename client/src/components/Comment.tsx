@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
 
 import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
 const Comment = ({ comment, onLike, onEdit, onDelete }) => {
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
 
   const [user, setUser] = useState({});
   const [isEditing, setIsEditing] = useState(false);

@@ -9,9 +9,10 @@ import {
 
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { RootState } from '../redux/store';
 
 const DashboardComp = () => {
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
 
   const [users, setUsers] = useState([]);
   const [totalUsers, setTotalUsers] = useState(0);

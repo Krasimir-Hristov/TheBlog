@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Comment from './Comment';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
+import { RootState } from '../redux/store';
 
 const CommentSection = ({ postId }) => {
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: RootState) => state.user);
 
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
