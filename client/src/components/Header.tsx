@@ -83,7 +83,7 @@ const Header = () => {
       <form onSubmit={handleSubmit}>
         <TextInput
           type='text'
-          placeholder='Search...'
+          placeholder='Suchen...'
           rightIcon={AiOutlineSearch}
           className='hidden lg:inline md:inline'
           value={searchTerm}
@@ -117,15 +117,15 @@ const Header = () => {
               </span>
             </Dropdown.Header>
             <Link to={'/dashboard?tab=profile'}>
-              <Dropdown.Item>Profile</Dropdown.Item>
+              <Dropdown.Item>Profil</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Dropdown.Item onClick={handleSignout}>Sign out</Dropdown.Item>
+            <Dropdown.Item onClick={handleSignout}>Abmelden</Dropdown.Item>
           </Dropdown>
         ) : (
           <Link to='/sign-in'>
             <Button gradientDuoTone='greenToBlue' outline>
-              Sign in
+              Anmelden
             </Button>
           </Link>
         )}
@@ -133,14 +133,14 @@ const Header = () => {
       </div>
       <NavbarCollapse>
         <Navbar.Link active={path === '/'} as={'div'}>
-          <Link to='/'>Home</Link>
+          <Link to='/'>Startseite</Link>
         </Navbar.Link>
         <Navbar.Link active={path === '/about'} as={'div'}>
-          <Link to='/about'>About</Link>
+          <Link to='/about'>Über uns</Link>
         </Navbar.Link>
-        <Navbar.Link active={path === '/projects'} as={'div'}>
+        {/* <Navbar.Link active={path === '/projects'} as={'div'}>
           <Link to='/projects'>Projects</Link>
-        </Navbar.Link>
+        </Navbar.Link> */}
       </NavbarCollapse>
     </Navbar>
   );

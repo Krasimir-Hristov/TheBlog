@@ -85,7 +85,9 @@ const DashboardComp = () => {
         <div className='flex flex-col p-3 dark:bg-slate-800 gap-4 md:w-72 w-full rounded-md shadow-md'>
           <div className='flex justify-between'>
             <div>
-              <h3 className='text-gray-500 text-md uppercase'> Total Users</h3>
+              <h3 className='text-gray-500 text-md uppercase'>
+                GESAMT BENUTZER
+              </h3>
               <p className='text-2xl'>{totalUsers}</p>
             </div>
             <HiOutlineUserGroup className='bg-teal-600 text-white rounded-full text-5xl p-3 shadow-lg' />
@@ -95,7 +97,7 @@ const DashboardComp = () => {
               <HiArrowNarrowUp />
               {lastMonthUsers}
             </span>
-            <div className='text-gray-500'>Last Month</div>
+            <div className='text-gray-500'>LETZTEN MONAT</div>
           </div>
         </div>
 
@@ -103,7 +105,7 @@ const DashboardComp = () => {
           <div className='flex justify-between'>
             <div>
               <h3 className='text-gray-500 text-md uppercase'>
-                Total Comments
+                GESAMTE KOMMENTARE
               </h3>
               <p className='text-2xl'>{totalComments}</p>
             </div>
@@ -114,14 +116,14 @@ const DashboardComp = () => {
               <HiArrowNarrowUp />
               {lastMonthComments}
             </span>
-            <div className='text-gray-500'>Last Month</div>
+            <div className='text-gray-500'>LETZTEN MONAT</div>
           </div>
         </div>
 
         <div className='flex flex-col p-3 dark:bg-slate-800 gap-4 md:w-72 w-full rounded-md shadow-md'>
           <div className='flex justify-between'>
             <div>
-              <h3 className='text-gray-500 text-md uppercase'> Total Posts</h3>
+              <h3 className='text-gray-500 text-md uppercase'>GESAMTE POSTS</h3>
               <p className='text-2xl'>{totalPosts}</p>
             </div>
             <HiDocumentText className='bg-lime-600 text-white rounded-full text-5xl p-3 shadow-lg' />
@@ -131,7 +133,7 @@ const DashboardComp = () => {
               <HiArrowNarrowUp />
               {lastMonthPosts}
             </span>
-            <div className='text-gray-500'>Last Month</div>
+            <div className='text-gray-500'>LETZTEN MONAT</div>
           </div>
         </div>
       </div>
@@ -139,16 +141,16 @@ const DashboardComp = () => {
       <div className='flex flex-wrap gap-4 py-3 mx-auto justify-center'>
         <div className='flex flex-col w-full md:w-auto shadow-md p-2 rounded-md dark:bg-gray-800'>
           <div className='flex justify-between p-3 text-sm font-semibold'>
-            <h1 className='text-center p-2'>Recent Users</h1>
+            <h1 className='text-center p-2'>NEUANMELDUNGEN</h1>
             <Button outline>
-              <Link to='/dashboard?tab=users'>See All</Link>
+              <Link to='/dashboard?tab=users'>ALLES SEHEN</Link>
             </Button>
           </div>
 
           <Table hoverable>
             <Table.Head>
-              <Table.HeadCell>User Image</Table.HeadCell>
-              <Table.HeadCell>Username</Table.HeadCell>
+              <Table.HeadCell>Benutzer Bilder</Table.HeadCell>
+              <Table.HeadCell>Benutzername</Table.HeadCell>
             </Table.Head>
 
             {users &&
@@ -171,15 +173,15 @@ const DashboardComp = () => {
 
         <div className='flex flex-col w-full md:w-auto shadow-md p-2 rounded-md dark:bg-gray-800'>
           <div className='flex justify-between p-3 text-sm font-semibold'>
-            <h1 className='text-center p-2'>Recent Comments</h1>
+            <h1 className='text-center p-2'>NEU KOMMENTARE</h1>
             <Button outline>
-              <Link to='/dashboard?tab=comments'>See All</Link>
+              <Link to='/dashboard?tab=comments'>ALLES SEHEN</Link>
             </Button>
           </div>
 
           <Table hoverable>
             <Table.Head>
-              <Table.HeadCell>Comment Content</Table.HeadCell>
+              <Table.HeadCell>Kommentare</Table.HeadCell>
               <Table.HeadCell>Likes</Table.HeadCell>
             </Table.Head>
 
@@ -199,17 +201,17 @@ const DashboardComp = () => {
 
         <div className='flex flex-col w-full md:w-auto shadow-md p-2 rounded-md dark:bg-gray-800'>
           <div className='flex justify-between p-3 text-sm font-semibold'>
-            <h1 className='text-center p-2'>Recent posts</h1>
+            <h1 className='text-center p-2'>NEUE POSTS</h1>
             <Button outline>
-              <Link to='/dashboard?tab=posts'>See All</Link>
+              <Link to='/dashboard?tab=posts'>ALLES SEHEN</Link>
             </Button>
           </div>
 
           <Table hoverable>
             <Table.Head>
-              <Table.HeadCell>Post Image</Table.HeadCell>
-              <Table.HeadCell>Post Title</Table.HeadCell>
-              <Table.HeadCell>Post Category</Table.HeadCell>
+              <Table.HeadCell>Post Bilder</Table.HeadCell>
+              <Table.HeadCell>Post Titel</Table.HeadCell>
+              <Table.HeadCell>Post Kategorie</Table.HeadCell>
             </Table.Head>
 
             {posts &&

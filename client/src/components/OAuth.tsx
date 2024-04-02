@@ -41,7 +41,7 @@ const OAuth = () => {
       onClick={handleGoogleClick}
     >
       <AiFillGoogleCircle className='w-6 h-6 mr-2' />
-      Continue with Google
+      Weiter mit Google
     </Button>
   );
 };

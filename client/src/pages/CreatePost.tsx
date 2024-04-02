@@ -100,7 +100,7 @@ const CreatePost = () => {
         <div className='flex flex-col gap-4 sm:flex-row justify-between'>
           <TextInput
             type='text'
-            placeholder='Title'
+            placeholder='Titel'
             required
             id='title'
             className='flex-1'
@@ -113,7 +113,7 @@ const CreatePost = () => {
               setFormData({ ...formData, category: e.target.value })
             }
           >
-            <option value='uncategorized'>Select a category</option>
+            <option value='unkategorisiert'>Wähle eine Kategorie</option>
             <option value='Javascript'>Javascript</option>
             <option value='ReactJS'>React.JS</option>
             <option value='NextJS'>Next.JS</option>
@@ -141,7 +141,7 @@ const CreatePost = () => {
                 />
               </div>
             ) : (
-              'Upload Image'
+              'Bild hochladen'
             )}
           </Button>
         </div>
@@ -158,12 +158,12 @@ const CreatePost = () => {
 
         <ReactQuill
           theme='snow'
-          placeholder='Write something...'
+          placeholder='Schreibe etwas...'
           className='h-96 mb-12'
           required
           onChange={(value) => setFormData({ ...formData, content: value })}
         />
-        <Button type='submit'>Publish</Button>
+        <Button type='submit'>Publizieren</Button>
 
         {publishError && (
           <Alert className='mt-5' color='failure'>

@@ -84,13 +84,13 @@ const DashPosts = () => {
         <>
           <Table hoverable className='shadow-md'>
             <Table.Head>
-              <Table.HeadCell>Date updated</Table.HeadCell>
-              <Table.HeadCell>Post image</Table.HeadCell>
-              <Table.HeadCell>Post title</Table.HeadCell>
-              <Table.HeadCell>Category</Table.HeadCell>
-              <Table.HeadCell>Delete</Table.HeadCell>
+              <Table.HeadCell>Datum aktualisiert</Table.HeadCell>
+              <Table.HeadCell>Beitragsbild</Table.HeadCell>
+              <Table.HeadCell>Beitragstitel</Table.HeadCell>
+              <Table.HeadCell>Kategorie</Table.HeadCell>
+              <Table.HeadCell>Löschen</Table.HeadCell>
               <Table.HeadCell>
-                <span>Edit</span>
+                <span>Bearbeiten</span>
               </Table.HeadCell>
             </Table.Head>
 
@@ -126,7 +126,7 @@ const DashPosts = () => {
                       }}
                       className='font-medium text-red-600 hover:underline cursor-pointer'
                     >
-                      Delete
+                      Löschen
                     </span>
                   </Table.Cell>
                   <Table.Cell>
@@ -134,7 +134,7 @@ const DashPosts = () => {
                       className='text-teal-600 hover:underline cursor-pointer'
                       to={`/update-post/${post._id}`}
                     >
-                      <span>Edit</span>
+                      <span>Bearbeiten</span>
                     </Link>
                   </Table.Cell>
                 </Table.Row>
@@ -147,12 +147,12 @@ const DashPosts = () => {
               onClick={handleShowMore}
               className='w-full text-teal-500 self-center text-sm py-7'
             >
-              Show More
+              Weitere anzeigen
             </button>
           )}
         </>
       ) : (
-        <p>You have no posts yet!</p>
+        <p>Es gibt noch keine Beiträge!</p>
       )}
 
       <Modal
@@ -166,7 +166,7 @@ const DashPosts = () => {
           <div className='text-center'>
             <HiOutlineExclamationCircle className='h-14 w-14 text-gray-500 dark:text-gray-200 mb-4 mx-auto' />
             <h3 className='mb-5 text-lg text-gray-500 dark:text-gray-400'>
-              Are you sure you want to delete this post ?
+              Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
             </h3>
             <div className='flex justify-center gap-4'>
               <Button
@@ -174,11 +174,11 @@ const DashPosts = () => {
                 className='mr-2'
                 onClick={handleDeletePost}
               >
-                Yes, I'm sure
+                Ja, ich bin sicher
               </Button>
 
               <Button color='gray' onClick={() => setShowModal(false)}>
-                No, clancel
+                Nein, abbrechen
               </Button>
             </div>
           </div>

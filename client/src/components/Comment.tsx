@@ -133,7 +133,7 @@ const Comment = ({ comment, onLike, onEdit, onDelete }) => {
                       onClick={handleEdit}
                       className='text-gray-400 hover:text-blue-500'
                     >
-                      Edit
+                      Bearbeiten
                     </button>
 
                     <button
@@ -141,7 +141,7 @@ const Comment = ({ comment, onLike, onEdit, onDelete }) => {
                       onClick={() => onDelete(comment._id)}
                       className='text-gray-400 hover:text-red-500'
                     >
-                      Delete
+                      Löschen
                     </button>
                   </>
                 )}

@@ -7,7 +7,7 @@ export default function Search() {
   const [sidebarData, setSidebarData] = useState({
     searchTerm: '',
     sort: 'desc',
-    category: 'uncategorized',
+    category: 'unkategorisiert',
   });
 
   console.log(sidebarData);
@@ -64,7 +64,7 @@ export default function Search() {
       setSidebarData({ ...sidebarData, sort: order });
     }
     if (e.target.id === 'category') {
-      const category = e.target.value || 'uncategorized';
+      const category = e.target.value || 'unkategorisiert';
       setSidebarData({ ...sidebarData, category });
     }
   };
@@ -109,7 +109,7 @@ export default function Search() {
               Search Term:
             </label>
             <TextInput
-              placeholder='Search...'
+              placeholder='Suchen...'
               id='searchTerm'
               type='text'
               value={sidebarData.searchTerm}
@@ -130,7 +130,7 @@ export default function Search() {
               value={sidebarData.category}
               id='category'
             >
-              <option value='uncategorized'>Uncategorized</option>
+              <option value='unkategorisiert'>Unkategorisiert</option>
               <option value='reactjs'>React.js</option>
               <option value='nextjs'>Next.js</option>
               <option value='javascript'>JavaScript</option>

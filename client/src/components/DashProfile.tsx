@@ -186,7 +186,7 @@ const DashProfile = () => {
 
   return (
     <div className='max-w-lg mx-auto p-3 w-full'>
-      <h1 className='my-7 text-center font-semibold text-3xl'>Profile</h1>
+      <h1 className='my-7 text-center font-semibold text-3xl'>Profil</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
           type='file'
@@ -238,21 +238,21 @@ const DashProfile = () => {
         <TextInput
           type='text'
           id='username'
-          placeholder='Username'
+          placeholder='Benutzername'
           defaultValue={currentUser?.username}
           onChange={handleChange}
         />
         <TextInput
           type='email'
           id='email'
-          placeholder='Email'
+          placeholder='E-Mail'
           defaultValue={currentUser?.email}
           onChange={handleChange}
         />
         <TextInput
           type='password'
           id='password'
-          placeholder='Password'
+          placeholder='Passwort'
           onChange={handleChange}
         />
 
@@ -266,7 +266,7 @@ const DashProfile = () => {
               gradientDuoTone='tealToLime'
               className='w-full'
             >
-              Create a post
+              Einen Beitrag erstellen
             </Button>
           </Link>
         )}
@@ -274,10 +274,10 @@ const DashProfile = () => {
 
       <div className='text-red-600 flex justify-between mt-5'>
         <span onClick={() => setShowModal(true)} className='cursor-pointer'>
-          Delete Account
+          Konto löschen
         </span>
         <span onClick={handleSignout} className='cursor-pointer'>
-          Sign Out
+          Abmelden
         </span>
       </div>
       {updateUserSuccess && (
@@ -307,7 +307,7 @@ const DashProfile = () => {
           <div className='text-center'>
             <HiOutlineExclamationCircle className='h-14 w-14 text-gray-500 dark:text-gray-200 mb-4 mx-auto' />
             <h3 className='mb-5 text-lg text-gray-500 dark:text-gray-400'>
-              Are you sure you want to delete your account ?
+              Sind Sie sicher, dass Sie Ihr Konto löschen möchten?
             </h3>
             <div className='flex justify-center gap-4'>
               <Button
@@ -315,11 +315,11 @@ const DashProfile = () => {
                 className='mr-2'
                 onClick={handleDeleteUser}
               >
-                Yes, I'm sure
+                Ja, ich bin sicher
               </Button>
 
               <Button color='gray' onClick={() => setShowModal(false)}>
-                No, clancel
+                Nein, abbrechen
               </Button>
             </div>
           </div>

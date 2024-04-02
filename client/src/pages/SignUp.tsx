@@ -51,10 +51,9 @@ const SignUp = () => {
       <div className='flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5'>
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
-            <span className='bg-gradient-to-r font-bold   from-white via-green-700 to-red-700 text-white px-2 py-1 rounded-md'>
-              Bulgarians
+            <span className='bg-black text-white px-2 py-1 rounded-md'>
+              Eleni's <span className='text-yellow-400'>Bekery</span>
             </span>
-            Blog
           </Link>
           <p className='text-sm mt-5'>
             If you want to learn a lot about Bulgaria, or simply to get news
@@ -64,16 +63,16 @@ const SignUp = () => {
         <div className='flex-1'>
           <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
-              <Label value='Your username' />
+              <Label value='Ihr Benutzername' />
               <TextInput
                 type='text'
-                placeholder='Username'
+                placeholder='Benutzername'
                 id='username'
                 onChange={handleChange}
               />
             </div>
             <div>
-              <Label value='Your email' />
+              <Label value='Deine E-Mail' />
               <TextInput
                 type='email'
                 placeholder='Name@company.com'
@@ -82,10 +81,10 @@ const SignUp = () => {
               />
             </div>
             <div>
-              <Label value='Your password' />
+              <Label value='Deine passwort' />
               <TextInput
                 type='password'
-                placeholder='Password'
+                placeholder='Passwort'
                 id='password'
                 onChange={handleChange}
               />
@@ -100,16 +99,16 @@ const SignUp = () => {
                   <Spinner size='sm' /> <span className='pl-3'>Loading...</span>{' '}
                 </div>
               ) : (
-                'Sign up'
+                'Anmelden'
               )}
             </Button>
 
             <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
-            <span>Already have an account?</span>
+            <span>Hast du bereits ein Konto?</span>
             <Link to='/sign-in' className='text-red-600'>
-              Sign in here.
+              Hier anmelden.
             </Link>
           </div>
           {errorMessage && (

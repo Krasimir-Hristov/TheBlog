@@ -121,7 +121,7 @@ export default function UpdatePost() {
         <div className='flex flex-col gap-4 sm:flex-row justify-between'>
           <TextInput
             type='text'
-            placeholder='Title'
+            placeholder='Titel'
             required
             id='title'
             className='flex-1'
@@ -136,7 +136,7 @@ export default function UpdatePost() {
             }
             value={formData.category}
           >
-            <option value='uncategorized'>Select a category</option>
+            <option value='unkategorisiert'>Wähle eine Kategorie</option>
             <option value='javascript'>JavaScript</option>
             <option value='reactjs'>React.js</option>
             <option value='nextjs'>Next.js</option>
@@ -179,7 +179,7 @@ export default function UpdatePost() {
         <ReactQuill
           theme='snow'
           value={formData.content}
-          placeholder='Write something...'
+          placeholder='Schreiben Sie etwas...'
           className='h-72 mb-12'
           required
           onChange={(value) => {
@@ -187,7 +187,7 @@ export default function UpdatePost() {
           }}
         />
         <Button type='submit' gradientDuoTone='purpleToPink'>
-          Update post
+          Beitrag aktualisieren
         </Button>
         {publishError && (
           <Alert className='mt-5' color='failure'>

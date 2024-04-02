@@ -59,7 +59,7 @@ const DashSidebar = () => {
                 icon={HiChartPie}
                 as='div'
               >
-                Dashboard
+                Übersicht
               </Sidebar.Item>
             </Link>
           )}
@@ -72,7 +72,7 @@ const DashSidebar = () => {
               className='cursor-pointer'
               as='div'
             >
-              Profile
+              Profil
             </Sidebar.Item>
           </Link>
           {currentUser.isAdmin && (
@@ -83,7 +83,7 @@ const DashSidebar = () => {
                   icon={HiDocumentText}
                   as='div'
                 >
-                  Posts
+                  Beiträge
                 </Sidebar.Item>
               </Link>
 
@@ -93,7 +93,7 @@ const DashSidebar = () => {
                   icon={HiAnnotation}
                   as='div'
                 >
-                  Comments
+                  Kommentare
                 </Sidebar.Item>
               </Link>
             </>
@@ -106,7 +106,7 @@ const DashSidebar = () => {
                 icon={HiOutlineUserGroup}
                 as='div'
               >
-                Users
+                Benutzer
               </Sidebar.Item>
             </Link>
           )}
@@ -116,7 +116,7 @@ const DashSidebar = () => {
             className='cursor-pointer'
             onClick={handleSignout}
           >
-            Sign Out
+            Abmelden
           </Sidebar.Item>
         </Sidebar.ItemGroup>
       </Sidebar.Items>
