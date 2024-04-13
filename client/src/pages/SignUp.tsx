@@ -50,14 +50,21 @@ const SignUp = () => {
     <div className='min-h-screen mt-20'>
       <div className='flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5'>
         <div className='flex-1'>
-          <Link to='/' className='font-bold dark:text-white text-4xl'>
-            <span className='bg-black text-white px-2 py-1 rounded-md'>
-              Eleni's <span className='text-yellow-400'>Bekery</span>
-            </span>
+          <Link
+            to='/'
+            className='flex  items-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
+          >
+            <div className='w-13 h-13 flex'>
+              <img
+                className='w-full h-full p-2'
+                src='/public/logo.png'
+                alt='logo'
+              />
+            </div>
           </Link>
           <p className='text-sm mt-5'>
-            If you want to learn a lot about Bulgaria, or simply to get news
-            related to the country, you are in the right place.
+            Willkommen! Bitte registrieren Sie sich, um Ihre Meinung zu unseren
+            Produkten zu teilen.
           </p>
         </div>
         <div className='flex-1'>
