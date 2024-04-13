@@ -78,9 +78,6 @@ const Header = () => {
             alt='logo'
           />
         </div>
-        {/* <span className='bg-black text-white px-2 py-1 rounded-md'>
-    Eleni's <span className='text-yellow-400'>Bekery</span>
-  </span> */}
       </Link>
 
       <form onSubmit={handleSubmit}>
