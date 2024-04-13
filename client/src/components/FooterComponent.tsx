@@ -92,7 +92,7 @@ const FooterComponent = () => {
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div className='flex flex-col sm:flex-row'>
+            <div className='flex flex-col sm:flex-row gap-3'>
               <Footer.Title
                 title='Öffnungszeiten:'
                 className='text-sm sm:text-lg'
