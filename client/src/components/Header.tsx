@@ -69,15 +69,18 @@ const Header = () => {
     <Navbar className='border-b-2'>
       <Link
         to='/'
-        className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
+        className='flex items-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        {/* <img
-          className='w-15 h-15'
-          src='https://scontent-muc2-1.xx.fbcdn.net/v/t1.6435-1/164968288_124705672996401_6599332581066927361_n.jpg?stp=dst-jpg_p200x200&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YPqxMrSWrjYAX_1xLfv&_nc_ht=scontent-muc2-1.xx&oh=00_AfA-srNImhyriVcdCa8ajJKoYeiDy8KUb7aaESErFdjwlA&oe=662FB220'
-        /> */}
-        <span className='bg-black text-white px-2 py-1 rounded-md'>
-          Eleni's <span className='text-yellow-400'>Bekery</span>
-        </span>
+        <div className='w-16 h-16'>
+          <img
+            className='w-full h-full p-2'
+            src='/public/logo.png'
+            alt='logo'
+          />
+        </div>
+        {/* <span className='bg-black text-white px-2 py-1 rounded-md'>
+    Eleni's <span className='text-yellow-400'>Bekery</span>
+  </span> */}
       </Link>
 
       <form onSubmit={handleSubmit}>

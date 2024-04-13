@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import CallToAction from '../components/CallToAction';
+// import CallToAction from '../components/CallToAction';
 import { useEffect, useState } from 'react';
 import PostCard from '../components/PostCard';
 
@@ -24,16 +24,16 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto'>
+      <div className='flex flex-col items-center gap-6 p-28 px-3 max-w-6xl mx-auto'>
         <h1 className='text-3-xl font-bold lg:text-6xl'>
-          Welcome to Eleni's <span className='text-yellow-400'>Bekery</span>
+          Willkommen bei Eleni's <span className='text-yellow-400'>Bekery</span>
         </h1>
 
         <p className='text-gray-500 text-4xl sm:text-lg'>
-          Most businesses know by now that Social Media is an incredibly
-          valuable tool when it comes to marketing. For instance, Bakeries can
-          reach existing audiences and customers via their platforms but also
+          Willkommen in unserer Bäckerei! Entdecken Sie köstliche Leckereien und
+          frisch zubereitete Versuchungen. Besuchen Sie uns noch heute!
         </p>
+        <img className='w-13 h-13' src='/public/logo.png' alt='logo' />
         <Link
           to='/search'
           className='text-xs sm:text-sm text-teal-500 font-bold hover:underline'

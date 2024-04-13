@@ -4,33 +4,46 @@ const About = () => {
       <div className='max-w-5xl mx-auto p-3 text-center'>
         <div>
           <h1 className='text-3xl font-semibold text-center my-7'>
-            About Eleni's Bekery
+            Über Eleni's Bekery
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Eleni's Bakery is a family-owned bakery that has been serving the
-              community for over 30 years. We specialize in custom cakes,
-              cookies, and other baked goods for all occasions. Our mission is
-              to provide our customers with delicious, high-quality baked goods
-              that are made
+              Unsere familiäre Bäckerei ist der neue Hotspot in Ihrer
+              Nachbarschaft, geschaffen mit einer Fülle von Liebe und
+              Leidenschaft für die Kunst des Backens. Inspiriert von
+              traditionellen Rezepten und verfeinert mit unserer eigenen Prise
+              Innovation, bieten wir eine Vielzahl von hausgemachten Süßigkeiten
+              und Snacks, die jeden Gaumen zufriedenstellen werden.
             </p>
 
             <p>
-              with love and care. We take pride in our work and strive to create
-              beautiful and tasty treats that will make your special occasion
-              even more memorable. Whether you're celebrating a birthday,
-              wedding, anniversary, or any other special event, we can create a
-              custom cake or dessert that will be the perfect centerpiece for
-              your celebration.
+              Entdecken Sie unsere exquisite Auswahl an frisch gebackenen
+              Süßigkeiten und Croissants, die den perfekten Start in Ihren Tag
+              bieten. Der Geschmack von frisch gebackenem Brot oder köstlich
+              knusprigem Gebäck wird Sie in Momente der Gemütlichkeit und des
+              Genusses versetzen.
             </p>
 
             <p>
-              Our bakery is known for our attention to detail and our commitment
-              to using only the finest ingredients in all of our baked goods. We
-              offer a wide variety of flavors and designs to choose from, so you
-              can be sure that your cake or dessert will be exactly what you're
-              looking for. We also offer gluten-free and vegan options, so
-              everyone can enjoy our delicious treats.
+              Verwöhnen Sie Ihre Sinne mit dem Duft unserer warmen,
+              verführerischen Desserts, sorgfältig zubereitet aus hochwertigen
+              Zutaten und mit viel Liebe zum Detail. Unwiderstehliche Leckereien
+              wie weiche Kekse und exquisite Cremes sind nur ein Teil unserer
+              reichen Vielfalt.
+            </p>
+
+            <p>
+              Unser Sortiment umfasst nicht nur süße Leckereien und Snacks,
+              sondern auch köstliche Burger und Pizza. Egal, ob Sie klassische
+              Burger oder innovative Pizza-Rezepte bevorzugen, wir haben für
+              jeden Geschmack etwas dabei.
+            </p>
+            <p>
+              Tauchen Sie ein in die Atmosphäre unserer Bäckerei und genießen
+              Sie das gemütliche Ambiente, das zu Momenten der Ruhe und Freude
+              einlädt. Wir erwarten Sie mit offenen Türen und den köstlichsten
+              hausgemachten Leckereien, bereit, Ihren Tag zu verschönern und
+              Ihnen ein Lächeln ins Gesicht zu zaubern.
             </p>
           </div>
         </div>

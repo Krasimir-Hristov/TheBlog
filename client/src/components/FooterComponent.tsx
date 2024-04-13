@@ -1,14 +1,38 @@
 import { Footer } from 'flowbite-react';
-import {
-  BsDiscord,
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsTwitch,
-} from 'react-icons/bs';
+// import {
+//   BsDiscord,
+//   BsFacebook,
+//   BsGithub,
+//   BsInstagram,
+//   BsTwitch,
+// } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
+import { useState } from 'react';
+
+// ...
+
 const FooterComponent = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const days = [
+    'Sonntag',
+    'Montag',
+    'Dienstag',
+    'Mittwoch',
+    'Donnerstag',
+    'Freitag',
+    'Samstag',
+  ];
+  const hours = [
+    '8:00-12:00 Uhr',
+    '7:00-17:00 Uhr',
+    '7:00-17:00 Uhr',
+    '7:00-17:00 Uhr',
+    '7:00-17:00 Uhr',
+    '7:00-17:00 Uhr',
+    '8:00-13:00 Uhr',
+  ];
+  const currentDay = new Date().getDay();
   return (
     <Footer container className='border border-t-8 border-teal-800'>
       <div className='w-full max-w-7xl mx-auto'>
@@ -16,60 +40,79 @@ const FooterComponent = () => {
           <div className='mt-5'>
             <Link
               to='/'
-              className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
+              className='flex  items-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
             >
-              <span className='bg-black text-white px-2 py-1 rounded-md'>
-                Eleni&apos;s <span className='text-yellow-400'>Bekery</span>
-              </span>
+              <div className='w-20 h-20 flex'>
+                <img
+                  className='w-full h-full p-2'
+                  src='/public/logo.png'
+                  alt='logo'
+                />
+              </div>
             </Link>
           </div>
           <div className='grid grid-cols-2 gap-8 mt-4  sm:grid-cols-3  sm:gap-6'>
             <div>
-              <Footer.Title title='About 1' />
+              <Footer.Title title='Sie können uns finden unter:' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='Link/1'
+                  href={`https://www.google.com/maps/place/Eleni's+Bakery/@48.669106,9.3726732,17z/data=!3m1!4b1!4m6!3m5!1s0x4799bf68136bdc31:0xbbc9e907b8430180!8m2!3d48.669106!4d9.3726732!16s%2Fg%2F11vwc922gp?entry=ttu`}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Link 1
+                  Hauptstraße 1, 73240 Wendlingen am Neckar
                 </Footer.Link>
-
+                {/* 
                 <Footer.Link
                   href='Link/2'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Link 2
-                </Footer.Link>
+                </Footer.Link> */}
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title='About 2' />
+              <Footer.Title title='Sie können uns kontaktieren unter:' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='Link/1'
+                  href={`https://www.google.com/maps/place/Eleni's+Bakery/@48.6699623,9.3702266,17.5z/data=!4m6!3m5!1s0x4799bf68136bdc31:0xbbc9e907b8430180!8m2!3d48.669106!4d9.3726732!16s%2Fg%2F11vwc922gp?entry=ttu`}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Link 1
+                  Telefon: +49-070244028907
                 </Footer.Link>
 
                 <Footer.Link
-                  href='Link/2'
+                  href={`https://www.google.com/maps/place/Eleni's+Bakery/@48.6699623,9.3702266,17.5z/data=!4m6!3m5!1s0x4799bf68136bdc31:0xbbc9e907b8430180!8m2!3d48.669106!4d9.3726732!16s%2Fg%2F11vwc922gp?entry=ttu`}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Link 2
+                  Handy: +49-01575 2450913
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div>
-              <Footer.Title title='Other Stuffs' />
-              <Footer.LinkGroup col>
-                <Footer.Link href='#'>Link 1</Footer.Link>
-
-                <Footer.Link href='Link/2'>Terms &amp; Conditions</Footer.Link>
+            <div className='flex flex-col sm:flex-row'>
+              <Footer.Title
+                title='Öffnungszeiten:'
+                className='text-sm sm:text-lg'
+              />
+              <Footer.LinkGroup col className='flex flex-col sm:flex-row'>
+                <p className='text-sm sm:text-base'>
+                  {days[currentDay]}: {hours[currentDay]}
+                </p>
+                {isOpen &&
+                  days.map((day, index) => (
+                    <p key={index} className='text-sm sm:text-base'>
+                      {day}: {hours[index]}
+                    </p>
+                  ))}
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className='text-sm sm:text-base text-teal-500 hover:underline mt-2 sm:mt-0'
+                >
+                  {isOpen ? 'Verbergen' : 'Zeigen'} voller Öffnungszeiten
+                </button>
               </Footer.LinkGroup>
             </div>
           </div>
@@ -79,15 +122,15 @@ const FooterComponent = () => {
           <Footer.Copyright
             href='#'
             by="Eleni's Bekery Wendlingen"
-            year={new Date().getFullYear()}
+            year={'2024'}
           />
-          <div className='flex gap-6 mt-4 sm:mt-0 sm:justify-center'>
+          {/* <div className='flex gap-6 mt-4 sm:mt-0 sm:justify-center'>
             <Footer.Icon href='#' icon={BsFacebook} />
             <Footer.Icon href='#' icon={BsInstagram} />
             <Footer.Icon href='#' icon={BsGithub} />
             <Footer.Icon href='#' icon={BsTwitch} />
             <Footer.Icon href='#' icon={BsDiscord} />
-          </div>
+          </div> */}
         </div>
       </div>
     </Footer>
