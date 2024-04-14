@@ -114,9 +114,17 @@ const CreatePost = () => {
             }
           >
             <option value='unkategorisiert'>Wähle eine Kategorie</option>
-            <option value='Javascript'>Javascript</option>
-            <option value='ReactJS'>React.JS</option>
-            <option value='NextJS'>Next.JS</option>
+            <option value='pizza'>Pizza</option>
+            <option value='hotdog'>Hot Dog</option>
+            <option value='bougatsa'>Bougatsa</option>
+            <option value='backwaren'>Backwaren</option>
+            <option value='brote'>Brote</option>
+            <option value='Kuchen'>Kuchen</option>
+            <option value='torten'>Torten</option>
+            <option value='kaffee'>Kaffee</option>
+            <option value='griechischespezialitäten'>
+              Griechische Spezialitäten
+            </option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>

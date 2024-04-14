@@ -85,7 +85,7 @@ const Header = () => {
           type='text'
           placeholder='Suchen...'
           rightIcon={AiOutlineSearch}
-          className='hidden lg:inline md:inline'
+          className='lg:inline md:inline'
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
