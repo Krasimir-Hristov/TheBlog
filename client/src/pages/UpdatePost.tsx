@@ -16,7 +16,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
 export default function UpdatePost() {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
   const [imageUploadProgress, setImageUploadProgress] = useState(null);
   const [imageUploadError, setImageUploadError] = useState(null);
   const [formData, setFormData] = useState({});
